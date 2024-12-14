@@ -2675,10 +2675,70 @@ input, select, textarea {
 			margin: 0 0 3rem 0;
 			width: 100%;
 		}
+		
+		.image.main img {
+			width: 100%;
+		}
 
-			.image.main img {
+	/* Spotlight Image */
+
+	.spotlight_image {
+		border: 0;
+		border-radius: 4px;
+		display: inline-block;
+		position: relative;
+		transition: transform 350ms;
+	}
+
+		.spotlight_image img {
+			display: block;
+			border-radius: 4px;
+		}
+
+		.spotlight_image.left, .spotlight_image.right {
+			width: 40%;
+			max-width: 10rem;
+		}
+
+			.spotlight_image.left img, .spotlight_image.right img {
 				width: 100%;
 			}
+
+		.spotlight_image.left {
+			float: left;
+			margin: 0 1.5rem 1rem 0;
+			top: 0.25rem;
+		}
+
+		.spotlight_image.right {
+			float: right;
+			margin: 0 0 1rem 1.5rem;
+			top: 0.25rem;
+		}
+
+		.spotlight_image.fit {
+			display: block;
+			margin: 0 0 2rem 0;
+			width: 100%;
+		}
+
+			.spotlight_image.fit img {
+				width: 100%;
+			}
+
+		.spotlight_image.main {
+			display: block;
+			margin: 0 0 3rem 0;
+			width: 100%;
+		}
+		
+		.spotlight_image.main img {
+			width: 100%;
+		}
+
+		.spotlight_image:hover {
+			transform: scale(1.2);
+		}
 
 /* List */
 
@@ -4857,6 +4917,7 @@ input, select, textarea {
 		justify-content: flex-end;
 		position: relative;
 		overflow-x: hidden;
+		overflow-y: hidden;
 		text-align: left;
 	}
 
