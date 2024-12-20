@@ -26,3 +26,15 @@
     left: 38.5%;
     padding-bottom: 20px;
 }
+
+.smaller-container {
+    margin-top: -6%;
+    margin-bottom: -6%;
+}
+
+.align-left-text {
+    text-wrap: wrap;
+    word-wrap: break-word;
+    margin-left: 20%;
+    margin-right: 20%;
+}
