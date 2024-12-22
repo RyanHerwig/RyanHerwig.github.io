@@ -2735,7 +2735,6 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		/*POYO*/
 		.spotlight_image:hover {
 			transform: scale(1.2);
 			z-index: 1;
