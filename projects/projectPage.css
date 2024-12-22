@@ -28,8 +28,22 @@
 }
 
 .smaller-container {
-    margin-top: -6%;
-    margin-bottom: -6%;
+    height: 100%;
+    padding: 0px;
+}
+
+.condensed-text {
+    margin: 5px;
+    padding: 0px;
+}
+
+.inner-text {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.extra-space {
+    padding-bottom: 20px;
 }
 
 .align-left-text {
