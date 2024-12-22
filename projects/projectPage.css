@@ -54,6 +54,7 @@
 }
 
 .no-clip {
+    margin: auto;
     height: 300px;
     width: auto;
 }
