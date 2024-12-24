@@ -1,13 +1,8 @@
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
-	<title>RyanHerwig - RvR</title>
+	<title>RyanHerwig - ORBIT</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -26,17 +21,22 @@
 			<section class="wrapper style1 align-center content">
 				<!--Head Image-->
 				<div class="container content smaller-container">
-					<img class="main-image" src="../../images/OrbitLogo.png" alt="" />
+					<img class="main-image" src="./Pictures/RunesVsRobotsLogo.png" alt="" />
 				</div>
 				<!--Description-->
 				<h2 class="condensed-text">Runes Vs. Robots</h2>
 				<p class="inner-text condensed-text extra-space">
-					ORBIT is a 3D tile-based puzzle game where each action you did in the
-					previous turn repeats every
-					subsequent turn. The actions you do are determined by the cards you receive which are dealt
-					psuedo-randomly.
+					Runes Vs. Robots is a 3D Tower Defense game, where the player builds the path that the enemies follow.
+					As the player is tasked also create the track with towers, they need to balance the quality of their
+					defense and the length of the track on a very thin line, as both require the same resource. All hope is
+					not lost, as the player has one last trump card. They can use mana to cast spells to turn the tide in their favor.
+					Whether you choose to short circuit the robots, give them false orders, or simply destroy them, it is all in
+					the hands of the player.
 					<br>
-					This game was produced by a nine person team in the Fall semester of my Junior year of highschool.
+					<br>
+					This game was produced remotely by a revolving team which never exceeded more than 10 members at any given
+					moment. Due to the nature of the team, all members - especially leaders - had to adapt to an ever changing
+					team list, learned how to work with dozens of different people, and required strong communication skills.
 					<br>
 					Built in Unity.
 				</p>
@@ -50,22 +50,18 @@
 			</section>
 
 			<!--Contributions-->
-			
+
 			<!--Contribution 1-->
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>Organization</h2>
-					<p>As part of the programming team, my first job was making a state machine that was able to communicate and
-						direct game flow using an enum and Unity Actions. With the state machine, the game could transition form
-						letting the player interact, playing player animations, and firing off traps. Additionally, to better organize
-						the game, I was tasked with managing the action order - which dictated what the player did and in what order.
-						With this task, I devised a system which allowed the player to make numerous changes to the order, and then
-						reflect those changes in the player's behavior and UI.
+					<h2>Team Lead / Lead Programmer</h2>
+					<p>
+
 					</p>
 				</div>
-				<div class="image">
-					<img src="../../images/OrbitLogo.png" alt="" />
+				<div class="image no-clip">
+					<img src="./Pictures/RunesVsRobotsLogo.png" alt="Failed to load image" />
 				</div>
 			</section>
 
@@ -73,14 +69,13 @@
 			<section
 				class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>UI Animation</h2>
-					<p>In order to make the game feel more polished, I added small, yet impactful, animations to the UI.
-						So the player knows exactly what is going on, I moved the deck and cards around the screen, such as when
-						the player played a card, when the card was confirmed or canceled, and when cards were dealt.
+					<h2>Producer</h2>
+					<p>
+
 					</p>
 				</div>
-				<div class="image">
-					<img src="../../images/OrbitLogo.png" alt="" />
+				<div class="image no-clip">
+					<img src="./Pictures/RunesVsRobotsLogo.png" alt="Failed to load image" />
 				</div>
 			</section>
 
@@ -88,34 +83,76 @@
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>UI</h2>
-					<p>I was in charge of maintaining the UI and making it as user friendly as possible,
-						allowing the user to interact with the contents as freely as possible while finding and
-						preventing any way the user can try to break it. I was also tasked to display the correct
-						information at the correct time and giving the user as much feedback as possible. Additionally,
-						I had to create a near bug-free system which allowed the player to interact with the action
-						order
-						in several different scenarios.</p>
+					<h2>Game Loop</h2>
+					<p>
+						While Lead Programmer, my first goal was to create an efficient and bug-free environment for the game.
+						To accomplish this, I created an organized loop that controlled all other aspects of the game. With this,
+						it removed numerous potential bugs, such as a list being read while a different area was writting into it.
+						To make the game as efficient as possible, I utilized object pooling to spawn the enemies, which made the game
+						only spawn as many enemies as it needed and to reuse enemies that were no longer active. With this system,
+						the game did not need to expend resources to repetively create and destroy enemy objects.
+					</p>
 				</div>
-				<div class="image">
-					<img src="../../images/OrbitLogo.png" alt="" />
+				<div class="image no-clip">
+					<img src="./Pictures/RunesVsRobotsLogo.png" alt="Failed to load image" />
 				</div>
 			</section>
 
-			<!--
-				<div class="align-left align-left-text">
-					<li>Action Order - I was responsible for organizing the action order, which included </li>
-					<p></p>
-					<li>UI Animation</li>
-					<p></p>
-					<li>UI - I was in charge of maintaining the UI and making it as user friendly as possible, 
-						allowing the user to interact with the contents as freely as possible while finding and 
-						preventing any way the user can try to break it. I was also tasked to display the correct 
-						information at the correct time and giving the user as much feedback as possible. Additionally,
-						I had to create a near bug-free system which allowed the player to interact with the action order
-						in several different scenarios.</li>
+			<!--Contribution 4-->
+			<section
+				class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Tower Behavior</h2>
+					<p>
+						Another task I had as Lead Programmer was creating all of the towers that we had during that time.
+						The main aspect of this task was creating a system that allowed the player to place towers, but 
+						restricting tower placement in certain areas, such as in water or on top of another tower.
+						Another key task was the tower targetting system. To allow the player to have complete control of the game
+						and to allow more micro strategies, I developed a numerous targeting strategies and allowed the player to 
+						choose, and change at any time, which strategy each individual tower will follow.
+					</p>
 				</div>
-			-->
+				<div class="image no-clip">
+					<img src="./Pictures/RunesVsRobotsLogo.png" alt="Failed to load image" />
+				</div>
+			</section>
+
+			<!--Contribution 5-->
+			<section
+				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Sound System</h2>
+					<p>
+						Unsatisfied with the performance of the default sound system, I took it upon myself to create a new sound
+						system that was more efficient and easier to use. To make the system more efficient, I used object pooling
+						for all of the sounds. Additionally, due to the same sound clip needing to be played, usually over-lapping,
+						the system created a new instance of the same audio file when the sound needed to be overlapped. The system
+						came with various changeable options, such as where the sound should be played, if it should be looped, if 
+						the sound should be played in a 3D setting, and so much more.
+						</p>
+				</div>
+				<div class="image no-clip">
+					<img src="./Pictures/RunesVsRobotsLogo.png" alt="Failed to load image" />
+				</div>
+			</section>
+
+			<!--Contribution 6-->
+			<section
+				class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Sound System Custom Inspector</h2>
+					<p>
+						To make the sound system easier to use, I created a custom inspector for the audio files.
+						This inspector contained every possible option for the sound to have, which included some options
+						that were usually hidden. To not overwhelm the user, I created a toggle to show the advanced sound options,
+						so that anyone could easily create a new sound file for the game, but a person who is disciplined in sound
+						could also use the advanced sound options.
+					</p>
+				</div>
+				<div class="image no-clip">
+					<img src="./Pictures/RunesVsRobotsLogo.png" alt="Failed to load image" />
+				</div>
+			</section>
 
 			<!--Links-->
 			<section class="wrapper style1 align-center content">
@@ -123,7 +160,7 @@
 					<h2 class="onload-content-fade-right">Links</h2>
 					<div class="items style1 medium onscroll-fade-in">
 						<section>
-							<a href="https://chiferito.itch.io/project-tower"
+							<a href="https://theacereal.itch.io/orbit"
 								class="icon brands style2 major-button fa-itch-io"><span
 									class="label">Itch.io</span></a>
 							<h3>Itch.io</h3>
