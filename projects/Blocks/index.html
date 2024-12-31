@@ -26,12 +26,14 @@
 				<!--Description-->
 				<h2 class="condensed-text">BLOCKS</h2>
 				<p class="inner-text condensed-text extra-space">
-					UwU
+					If it moves, it is deadly. The only goal is to survive. Collect coins to unlock new skills and become stronger.
+					BLOCKS is an incrediblely simple game with minimal art and sound, designed to be difficult and put your
+					awareness to the limit.
 					<br>
 					<br>
-					Built by me, in a two month period during the fall smeester of my Junior year.
+					Built entirely by me, in a two month period during the fall smeester of my Junior year.
 					<br>
-					Built in IntelliJ (IDE) with Java
+					Built in IntelliJ (IDE) with Java. This is not the finished product.
 				</p>
 			</section>
 			<section class="wrapper style1 align-center content">
@@ -44,9 +46,17 @@
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>Lighting</h2>
+					<h2>Game Loop</h2>
 					<p>
-						
+						Given my circumstances and time limit, the game was required to be simple in concept and not rely on
+						too much artwork, if any. This brought me to the concept of BLOCKS - a square with unusual movement
+						with the only objective to not get hit by other rectangles. To not be overscoped, the game would not
+						have any progression in between different games. One main problem I ran into was that people tended
+						to camp the corner of the screen. To discourage this, I made a side objective to risk your health
+						to collect coins and grow stronger as the game progressed. Additionally, the enemies scaled and got
+						stronger as the game continued to further incentivize the player. For the final nail in the coffin,
+						I created the homing enemy that followed the player. I found that with these systems in place,
+						the player could not attempt to camp without severe punishments. 
 					</p>
 				</div>
 				<div class="image no-clip">
@@ -77,9 +87,20 @@
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2></h2>
+					<h2>Screen Shake and Hit Stop</h2>
 					<p>
-						
+						Because I did not build this game in an engine, such as Unity, I did not have easy access to either
+						of these options, however, because I built this game from the ground up, I knew how everything worked.
+						With this knowledge, to simulate screen shake, I randomly displaced every object on the screen every few
+						frames. With screen shake, the player can see the impact of enemies hitting them.
+						<br>
+						To simulate hit stop, I added a method that paused my game loop for a certain period of time, then resumed
+						the game loop as if nothing has happened. With hit stop, the player is able to feel the impact of enemies
+						slamming into them. Additionally, hit stop serves as a brief grace period for the player to realize that
+						they have taken damage and then react accordingly. However, having the game pause for a fraction of a
+						second looks weird, which is why screen shake is also essential. This is because while the game is frozen,
+						the screen is also shaking. This allows the player to feel and see the impact, however, they do not notice
+						the downsides of having either one.
 					</p>
 				</div>
 				<div class="image no-clip">
