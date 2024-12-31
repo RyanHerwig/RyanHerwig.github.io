@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>RyanHerwig - Frostblade Saga</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main.css" />
+	<link rel="stylesheet" href="../projectPage.css" />
+	<noscript>
+		<link rel="stylesheet" href="../../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload" style="background: linear-gradient(115deg, white, rgb(120, 120, 120));">
+	<!-- Wrapper -->
+	<div id="wrapper" class="divided">
+		<section class="banner fullscreens onload-image-fade-in onload-content-fade-right">
+
+			<!--Header-->
+			<section class="wrapper style1 align-center content">
+				<!--Head Image-->
+				<div class="container content smaller-container">
+					<img class="main-image" src="./Pictures/FrostbladeLogo.png" alt="" />
+				</div>
+				<!--Description-->
+				<h2 class="condensed-text">Frostblade Saga</h2>
+				<p class="inner-text condensed-text extra-space">
+					Search for apparitions in the haunted exhibition. Search through the paintings and look for any
+					signs of it being possessed. Be warned, you may become the newest exhibit.
+					<br>
+					<br>
+					Built with a team of 9 people in a 48 hour time period. Awarded 1st place in the 2024 Fall KABOOM! Game Jam.
+					<br>
+					Built in Unity. Download game for the best experience (unresolved bugs in WebGL version)
+				</p>
+			</section>
+			<section class="wrapper style1 align-center content">
+
+				<!--Role-->
+				<h2 class="condensed-text">Role</h2>
+				<p class="condensed-text extra-space">Programmer</p>
+				<h3>What Did I Contribute?</h3>
+			</section>
+
+			<!--Contributions-->
+
+			<!--Contribution 1-->
+			<section
+				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Lighting</h2>
+					<p>
+						Utilizing masks, I first simulated darkness by covering the screen with a black screen.
+						Then, I unmasked a certain radius from the cursor, gradually getting weaker, to simulate
+						a flashlight. To more accurately simulate a flashlight, I studied flickering lights and 
+						took notes on how they look, then replicated the results of my research into the game.
+					</p>
+				</div>
+				<div class="image no-clip">
+					<img src="./Pictures/ApparitionExhibitation1.png" alt="Failed to load image" />
+				</div>
+			</section>
+
+			<!--Contribution 2-->
+			<section
+				class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Movement</h2>
+					<p>
+						For movement, I created anchor points for the camera to go to. Each anchor point had
+						a debug Gizmo that showed the bounds of the camera, so at each point, we knew exactly how
+						much area we could work with. To keep track of where the camera is, I associated each anchor
+						point to an item in a list, which allowed me to keep track of the camera position at any given moment.
+						It also allowed me to easily find when the camera reached one of the end anchors, which were associated
+						with the beginning and end of the list.
+					</p>
+				</div>
+				<div class="image no-clip">
+					<img src="./Pictures/ApparitionExhibitation2.png" alt="Failed to load image" />
+				</div>
+			</section>
+
+			<!--Contribution 3-->
+			<section
+				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Handled logic for caught Apparitions</h2>
+					<p>
+						To detect when an apparition was detected, a collider that covered it spawned alongside the apparition.
+						When the mouse clicked while inside one of the colliders, the corresponding apparition disappeared and
+						a counter for how many caught increased. Additionally, a particle effect was spawned at the location of where
+						the apparition was to clearly signal to the player that they caught one. To prevent spamming,
+						the detection of an apparition was put on a cooldown, indicated by the flickering of the flashlight.
+					</p>
+				</div>
+				<div class="image no-clip">
+					<img src="./Pictures/ApparitionExhibitation3.png" alt="Failed to load image" />
+				</div>
+			</section>
+
+			<!--Links-->
+			<section class="wrapper style1 align-center content">
+				<div class="inner">
+					<h2 class="onload-content-fade-right">Links</h2>
+					<div class="items style1 medium onscroll-fade-in">
+						<section>
+							<a href="https://cascadeinteractive.itch.io/apparition-exhibitation"
+								class="icon brands style2 major-button fa-itch-io"><span
+									class="label">Itch.io</span></a>
+							<h3>Itch.io</h3>
+							<p>Play the Game!</p>
+						</section>
+						<section>
+							<a href="../../index.html#Gallery"
+								class="icon style2 solid major-button fa-chess-rook"><span
+									class="label">Gallery</span></a>
+							<h3>More Games</h3>
+							<p>View other games I worked on!</p>
+						</section>
+						<section>
+							<a href="../../index.html#Contact" class="icon style2 solid major-button fa-envelope"><span
+									class="label">Envelope</span></a>
+							<h3>Contact me</h3>
+							<p>rzherwig@gmail.com</p>
+						</section>
+						<section>
+							<a href="https://github.com/RyanHerwig"
+								class="icon style2 brands major-button fa-github"><span class="label">Github</span></a>
+							<h3>Github</h3>
+						</section>
+						<section>
+							<a href="https://www.linkedin.com/in/ryan-herwig/"
+								class="icon style2 brands major-button fa-linkedin-in"><span
+									class="label">Linkedin</span></a>
+							<h3>Linkedin</h3>
+						</section>
+					</div>
+				</div>
+			</section>
+
+			<!--Back Button-->
+			<section class="content fixedPosition">
+				<a href="../../index.html" class="icon solid style2 fa-backward"><span class="label">Github</span></a>
+			</section>
+		</section>
+	</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

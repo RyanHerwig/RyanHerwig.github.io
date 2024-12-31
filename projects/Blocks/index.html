@@ -46,7 +46,7 @@
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>Game Loop</h2>
+					<h2>Game Idea</h2>
 					<p>
 						Given my circumstances and time limit, the game was required to be simple in concept and not rely on
 						too much artwork, if any. This brought me to the concept of BLOCKS - a square with unusual movement
@@ -59,8 +59,8 @@
 						the player could not attempt to camp without severe punishments. 
 					</p>
 				</div>
-				<div class="image no-clip">
-					<img src="./Pictures/BlocksLogo.png" alt="Failed to load image" />
+				<div class="image no-clip2">
+					<img src="./Pictures/BLOCKS1.png" alt="Failed to load image" />
 				</div>
 			</section>
 
@@ -104,7 +104,27 @@
 					</p>
 				</div>
 				<div class="image no-clip">
-					<img src="./Pictures/BlocksLogo.png" alt="Failed to load image" />
+					<img src="./Pictures/BLOCKS3.gif" alt="Failed to load image" />
+				</div>
+			</section>
+
+			<!--Contribution 2-->
+			<section
+				class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Collision Logic and Rendering</h2>
+					<p>
+						To create collision, I gave the program a 2D grid that contains an x and y position and the
+						width and height of the object. Each object also holds an enum of what type of object it is, such as
+						the player or certain enemy. Whenever the player's position overlapped another object, I grabbed
+						what object it was through the enum and provided logic on what happens. I then told the window
+						to render rectangles at certain x-y coordinates with certain widths and heights. Finally,
+						I had to sync the game logic and rendering together so that the player could properly see the
+						enemies and would not be colliding with invisible enemies.
+					</p>
+				</div>
+				<div class="image no-clip3">
+					<img src="./Pictures/BLOCKS4.png" alt="Failed to load image" />
 				</div>
 			</section>
 
