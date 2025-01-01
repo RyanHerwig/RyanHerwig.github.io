@@ -26,11 +26,15 @@
 				<!--Description-->
 				<h2 class="condensed-text">Frostblade Saga</h2>
 				<p class="inner-text condensed-text extra-space">
-					Search for apparitions in the haunted exhibition. Search through the paintings and look for any
-					signs of it being possessed. Be warned, you may become the newest exhibit.
+					Fight back against the invading Flame Nation. As a renouned hero of the land, you wield an ice blade
+					that can change form at will. Defend the kingdom of ice and save the princess!
+					<br>
+					Frostblade Saga is a 2D platformer where you can freeze projectiles and turn them into platforms and
+					cut down enemies with a sword. The sword has two forms - one for weak, quick attacks, and the other for
+					strong, slow attacks.
 					<br>
 					<br>
-					Built with a team of 9 people in a 48 hour time period. Awarded 1st place in the 2024 Fall KABOOM! Game Jam.
+					Built with a team of 12 people in 3 weeks. Everyone worked remotely.
 					<br>
 					Built in Unity. Download game for the best experience (unresolved bugs in WebGL version)
 				</p>
@@ -49,16 +53,18 @@
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>Lighting</h2>
+					<h2>Stages and Attacks</h2>
 					<p>
-						Utilizing masks, I first simulated darkness by covering the screen with a black screen.
-						Then, I unmasked a certain radius from the cursor, gradually getting weaker, to simulate
-						a flashlight. To more accurately simulate a flashlight, I studied flickering lights and 
-						took notes on how they look, then replicated the results of my research into the game.
+						To create attacks, I took advantage of the Unity physics engine and casted circles with a specified size
+						and location, relative to the player. For debugging purposes, I created Gizmos for where the hitbox was
+						placed and how big it was. Moreover, I created the mana system that goes with most of the attacks to
+						prevent spamming attacks and give more incentive for the player to use the weaker form. To decide which
+						attack to throw out, I kept a boolean of what form the blade is in, and chose an attack depending on the
+						blade's stage and what button was pushed.
 					</p>
 				</div>
 				<div class="image no-clip">
-					<img src="./Pictures/ApparitionExhibitation1.png" alt="Failed to load image" />
+					<img src="./Pictures/Frostblade1.gif" alt="Failed to load image" />
 				</div>
 			</section>
 
@@ -68,16 +74,16 @@
 				<div class="content">
 					<h2>Movement</h2>
 					<p>
-						For movement, I created anchor points for the camera to go to. Each anchor point had
-						a debug Gizmo that showed the bounds of the camera, so at each point, we knew exactly how
-						much area we could work with. To keep track of where the camera is, I associated each anchor
-						point to an item in a list, which allowed me to keep track of the camera position at any given moment.
-						It also allowed me to easily find when the camera reached one of the end anchors, which were associated
-						with the beginning and end of the list.
+						To make a flexible and powerful character controller, I added numerous variables that could be easily adjusted.
+						These included (but not limited to) the player's speed, sprint speed, acceleration, ground deceleration,
+						aerial deceleration, jumping power, gravity, gravity after releasing jump early
+						(to control variable jump height), fall gravity modifier, terminal velocity, coyote time, buffer time,
+						and grounding force. To achieve this, I needed a deep understanding of physics and how games commonly
+						incorporated (and broke) the laws of physics.
 					</p>
 				</div>
 				<div class="image no-clip">
-					<img src="./Pictures/ApparitionExhibitation2.png" alt="Failed to load image" />
+					<img src="./Pictures/Frostblade2.gif" alt="Failed to load image" />
 				</div>
 			</section>
 
@@ -85,17 +91,17 @@
 			<section
 				class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
-					<h2>Handled logic for caught Apparitions</h2>
+					<h2>UI</h2>
 					<p>
-						To detect when an apparition was detected, a collider that covered it spawned alongside the apparition.
-						When the mouse clicked while inside one of the colliders, the corresponding apparition disappeared and
-						a counter for how many caught increased. Additionally, a particle effect was spawned at the location of where
-						the apparition was to clearly signal to the player that they caught one. To prevent spamming,
-						the detection of an apparition was put on a cooldown, indicated by the flickering of the flashlight.
+						I coded a lot of the UI, such as the Health and Mana bars. This was done by
+						by taking the current value and dividing it by the maximum possible value.
+						This yields the percent of the bar that needs to be filled to accurately show
+						the amount of health and mana the player has, relative to their maximum values.
+
 					</p>
 				</div>
 				<div class="image no-clip">
-					<img src="./Pictures/ApparitionExhibitation3.png" alt="Failed to load image" />
+					<img src="./Pictures/Frostblade3.gif" alt="Failed to load image" />
 				</div>
 			</section>
 
