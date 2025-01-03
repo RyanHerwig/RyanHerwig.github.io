@@ -2801,6 +2801,9 @@ a.icon.style2:active:before {
 
 .spotlight_image {
 	border: 0;
+	width: auto;
+	height: 600px;
+	margin: auto;
 	border-radius: 4px;
 	display: inline-block;
 	position: relative;
